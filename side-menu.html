@@ -13,7 +13,7 @@
 <body>
    <nav class="sidebar">
       <!-- Sidebar title -->
-      <div class="text">
+      <div class="title">
          Side Menu
       </div>
 
@@ -25,7 +25,7 @@
          option w/ submenu:
             <li>
                <a href="#" class="[option]-btn">[Option]
-                  <span class="fas fa-caret-down opt-[option # (opt-1, opt-2, etc)]"></span>
+                  <span class="fas fa-caret-down [option]-opt"></span>
                </a>
             </li>
          sub-menu:
@@ -35,19 +35,36 @@
             </ul>
       -->
       <ul>
-         <li class="active"><a href="#">Dashboard</a></li>
+         <li><a href="#">Dashboard</a></li>
          <li>
             <a href="#" class="feat-btn">Features
-               <span class="fas fa-caret-down opt-1"></span>
+               <span class="fas fa-caret-down feat-opt"></span>
             </a>
             <ul class="feat-show">
-               <li><a href="#">Pages</a></li>
+               <li>
+                  <a href="#" class="page-btn">Pages
+                     <span class="fas fa-caret-down page-opt"></span>
+                  </a>
+                  <ul class="page-show">
+                     <li><a href="#">Page 1</a></li>
+                     <li>
+                        <a href="#" class="sect-btn">Page 2
+                           <span class="fas fa-caret-down sect-opt"></span>
+                        </a>
+                        <ul class="sect-show">
+                           <li><a href="#">Section 1</a></li>
+                           <li><a href="#">Section 2</a></li>
+                        </ul>
+                     </li>
+                     <li><a href="#">Page 3</a></li>
+                  </ul>
+               </li>
                <li><a href="#">Elements</a></li>
             </ul>
          </li>
          <li>
             <a href="#" class="serv-btn">Services
-               <span class="fas fa-caret-down opt-2"></span>
+               <span class="fas fa-caret-down serv-opt"></span>
             </a>
             <ul class="serv-show">
                <li><a href="#">App Design</a></li>
@@ -57,7 +74,7 @@
          <li><a href="#">Portfolio</a></li>
          <li><a href="#">Overview</a></li>
          <li><a href="#">Shortcuts</a></li>
-         <li><a href="#">Feedback</a></li>
+         <li><a href="#" class="last">Feedback</a></li>
       </ul>
    </nav>
 
@@ -65,27 +82,33 @@
       /*
       click() function needed for every option with a submenu:
          $('[option]-btn').click(function () {
-            $('nav ul .[option]-show').toggleClass("show-[option #]");  // show submenu
-            $('nav ul .opt-[option #]').toggleClass("rotate");  // rotate arrow icon
+            $('nav ul .[option]-show').toggleClass("show-[option]");  // show submenu
+            $('nav ul .[option]-opt').toggleClass("rotate");  // rotate arrow icon
          });
       */
 
       // 'Features'
       $('.feat-btn').click(function () {
-         $('nav ul .feat-show').toggleClass("show-1");  // show submenu
-         $('nav ul .opt-1').toggleClass("rotate");  // rotate arrow icon
+         $('.feat-show').toggleClass("show-feat");  // show submenu
+         $('.feat-opt').toggleClass("rotate");  // rotate arrow icon
       });
 
       // 'Services'
       $('.serv-btn').click(function () {
-         $('nav ul .serv-show').toggleClass("show-2");
-         $('nav ul .opt-2').toggleClass("rotate");
+         $('.serv-show').toggleClass("show-serv");
+         $('.serv-opt').toggleClass("rotate");
       });
 
-      // Any L1 menu option clicked
-      $('nav ul li').click(function () {
-         // make the clicked option active; make all other options inactive
-         $(this).addClass("active").siblings().removeClass("active");
+      // 'Pages'
+      $('.page-btn').click(function () {
+         $('.page-show').toggleClass("show-page");
+         $('.page-opt').toggleClass("rotate");
+      });
+
+      // 'Sections'
+      $('.sect-btn').click(function () {
+         $('.sect-show').toggleClass("show-sect");
+         $('.sect-opt').toggleClass("rotate");
       });
    </script>
 </body>
