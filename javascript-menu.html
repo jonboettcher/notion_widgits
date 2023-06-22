@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
 
+<head>
+   <meta charset="utf-8">
+   <title>Sidebar Menu with sub-menu | CodingNepal</title>
+   <link rel="stylesheet" href="javascript-menu.css">
+   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+   <nav class="sidebar">
+      <!-- Sidebar title -->
+      <div class="title">
+         JavaScript Notes
+      </div>
+
+      <!-- Menu options -->
+      <!--
+         class="active" refers to default active option
+         option w/o submenu:
+            <li><a href="#">[Option]</a></li>
+         option w/ submenu:
+            <li>
+               <a href="#" class="[option]-btn">[Option]
+                  <span class="fas fa-caret-down [option]-opt"></span>
+               </a>
+            </li>
+         sub-menu:
+            <ul class="[option]-show">
+               <li><a href="#">[option]</a></li>
+               <li><a href="#">[option]/a></li>
+            </ul>
+      -->
+      <ul>
+         <li><a href="https://www.notion.so/JavaScript-Intro-96d48a07651549e2a670d809e5443db2">JavaScript Intro</a></li>
+         <li><a href="https://www.notion.so/Developer-Console-5618bfd9f0024acc8d969fa1783c505f">Developer Console</a></li>
+         <li><a href="https://www.notion.so/JavaScript-Fundamentals-b1a54d5361514ecdb952818a4b591ad0" class="last">JavaScript Fundamentals</a></li>
+      </ul>
+   </nav>
+
+   <script>
+      /*
+      click() function needed for every option with a submenu:
+         $('[option]-btn').click(function () {
+            $('nav ul .[option]-show').toggleClass("show-[option]");  // show submenu
+            $('nav ul .[option]-opt').toggleClass("rotate");  // rotate arrow icon
+         });
+      */
+   </script>
+</body>
+
+</html>
