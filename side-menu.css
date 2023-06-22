@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fira Code');
 
 * {
   margin: 0;
@@ -8,130 +9,176 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* Menu positioning, size, and background */
-.sidebar {
+/* Menu (size/position) */
+nav {
   position: fixed;
-  width: 250px;
-  height: 100%;
+  width: 200px;
   left: 0px;
-  background: #1b1b1b;
-  transition: left 0.4s ease;
 }
 
 /* Menu title */
-.sidebar .text {
-  color: white;
-  font-size: 25px;
+.title {
+  font-size: 20px;
   font-weight: 600;
-  line-height: 65px;
+  line-height: 40px;
   text-align: center;
-  background: #1e1e1e;
   letter-spacing: 1px;
+  color: #1e1e1e;
+  background: #e6e6e6;
 }
 
-/* All menu options - background color and size */
+/* Menu options container (size and style) */
 nav ul {
-  background: #1b1b1b;
   height: 100%;
   width: 100%;
   list-style: none;
 }
-  /*------- For all individual menu options --------*/
-  /* Individual menu options - size and top border */
-  nav ul li {
-    line-height: 60px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-  }
 
-  /* Last menu option - bottom border */
-  nav ul li:last-child {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  }
+/* Menu options (top border for L1) */
+nav ul li {
+  border-top: 1px solid #1e1e1e40;
+}
 
-    /* Individual menu options - text */
-    nav ul li a {
-      position: relative;
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-      padding-left: 40px;
-      font-weight: 500;
-      display: block;
-      width: 100%;
-      border-left: 3px solid transparent;
-    }
+/* Last menu option (bottom border for L1) */
+.last {
+  border-bottom: 1px solid #1e1e1e40;
+}
 
-    /* Active menu option - text and border color */
-    nav ul li.active a {
-      color: cyan;
-      background: #1e1e1e;
-      border-left-color: cyan;
-    }
+/* Menu option text */
+nav a {
+  position: relative;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  border-left: 3px solid transparent;
+  color: #1e1e1e;
+  background: #e6e6e6;
+}
 
-    /* Individual menu options - mouse hover */
-    nav ul li a:hover {
-      background: #1e1e1e;
-    }
+/* Menu options (mouse hover) */
+nav a:hover {
+  color: #e6e6e6;
+  background: #1e1e1e;
+}
 
-    /*------- For menu options with submenu --------*/
-    /* Menu option - arrow icon when closed */
-    nav ul li a span {
-      position: absolute;
-      top: 50%;
-      right: 20px;
-      transform: translateY(-50%);
-      font-size: 22px;
-      transition: transform 0.4s;
-    }
+/* Menu options w/ submenu (closed arrow) */
+a span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.4s;
+}
 
-    /* Menu option when clicked - rotate arrow icon */
-    nav ul li a span.rotate {
-      transform: translateY(-50%) rotate(-180deg);
-    }
-  
-  /*------- Submenus --------*/
-  /* All submenu options - not showing by default */
-  nav ul ul {
-    position: static;
-    display: none;
-  }
+/* Option w/ submenu (open arrow) */
+a span.rotate {
+  transform: translateY(-50%) rotate(-180deg);
+}
 
-    /* Individual submenu options - size and top border */
-    nav ul ul li {
-      line-height: 42px;
-      border-top: none;
-    }
+/*------- L1 menu options -------*/
+/* Option height */
+nav ul li {
+  line-height: 30px;
+}
 
-      /* Individual submenu options - text */
-      nav ul ul li a {
-        font-size: 17px;
-        color: #e6e6e6;
-        padding-left: 80px;
-      }
+/* Option text */
+nav ul li a {
+  font-size: 16px;
+  padding-left: 40px;
+  font-weight: 500;
+}
 
-      /* Submenu options for the active menu option - text and border color */
-      nav ul li.active ul li a {
-        color: #e6e6e6;
-        background: #1b1b1b;
-        border-left-color: transparent;
-      }
+/* Option w/ submenu (closed arrow) */
+nav ul li a span {
+  right: 20px;
+  font-size: 16px;
+}
 
-      /* Submenu options - mouse hover */
-      nav ul ul li a:hover {
-        color: cyan !important;
-        background: #1e1e1e !important;
-      }
-
-/*------- Specific options with submenus --------*/
-/* Each one will show when clicked - has the format
-      nav ul .[option]-show.show-[option #] */
 /* Features */
-nav ul .feat-show.show-1 {
+.feat-show.show-feat {
   display: block;
 }
 
 /* Services */
-nav ul .serv-show.show-2 {
+.serv-show.show-serv {
   display: block;
 }
 
+    /*------- L2 menu options -------*/
+    /* Not showing until clicked */
+    nav ul ul {
+      position: static;
+      display: none;
+    }
+
+    /* Option height and border */
+    nav ul ul li {
+      line-height: 25px;
+      border-top: none;
+    }
+
+    /* Option text */
+    nav ul ul li a {
+      font-size: 15px;
+      padding-left: 65px;
+      font-family: 'Fira Code'
+    }
+
+    /* Option w/ submenu (closed arrow) */
+    nav ul ul li a span {
+      right: 20px;
+      font-size: 15px;
+    }
+
+    /* Pages */
+    .page-show.show-page {
+      display: block;
+    }
+
+        /*------- L3 menu options -------*/
+        /* Not showing until clicked */
+        nav ul ul ul {
+          position: static;
+          display: none;
+        }
+
+        /* Option height and border */
+        nav ul ul ul li {
+          line-height: 20px;
+          border-top: none;
+        }
+
+        /* Option text */
+        nav ul ul ul li a {
+          font-size: 14px;
+          padding-left: 85px;
+        }
+
+        /* Option w/ submenu (closed arrow) */
+        nav ul ul ul li a span {
+          right: 20px;
+          font-size: 14px;
+        }
+
+        /* Sections */
+        .sect-show.show-sect {
+          display: block;
+        }
+
+            /*------- L4 menu options -------*/
+            /* Not showing until clicked */
+            nav ul ul ul ul {
+              position: static;
+              display: none;
+            }
+
+            /* Option height and border */
+            nav ul ul ul ul li {
+              line-height: 15px;
+              border-top: none;
+            }
+
+            /* Option text */
+            nav ul ul ul ul li a {
+              font-size: 13px;
+              padding-left: 105px;
+            }
