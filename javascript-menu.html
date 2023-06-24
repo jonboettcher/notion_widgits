@@ -173,6 +173,15 @@
    display: block;
    }
 
+   /* Data Types */
+   .datatypes-menu {
+      position: static;
+      display: none;
+   }
+      .datatypes-menu.show-datatypes-menu {
+      display: block;
+   }
+
    /* Basic Loops */
    .loop-menu {
    position: static;
@@ -243,7 +252,36 @@
                      <div><a href="https://www.notion.so/Variables-81451a7e83534a88a08dca932613772a" target="_top">Variables</a></div>
                   </li>
                   <li>
-                     <div><a href="https://www.notion.so/Data-Types-3c9e606de992449fb222ff542a0aa20b" target="_top">Data Types</a></div>
+                     <div>
+                        <a href="https://www.notion.so/Data-Types-3c9e606de992449fb222ff542a0aa20b" target="_top">Data Types</a>
+                        <span class="fas fa-caret-down datatypes-btn datatypes-arrow"></span>
+                     </div>
+                     <ul class="l3 datatypes-menu">
+                        <li>
+                           <div><a href="https://www.notion.so/Data-Types-3c9e606de992449fb222ff542a0aa20b?pvs=4#0e7ead0ac047475ba87badadf3ad10c2" target="_top">Number</a></div>
+                        </li>
+                        <li>
+                           <div><a href="https://www.notion.so/Data-Types-3c9e606de992449fb222ff542a0aa20b?pvs=4#6264c5be20bd4d41af7da0cec73f7664" target="_top">BigInt</a></div>
+                        </li>
+                        <li>
+                           <div><a href="https://www.notion.so/Data-Types-3c9e606de992449fb222ff542a0aa20b?pvs=4#295c92a9f2d14ff7b765b9d825b6aacd" target="_top">String</a></div>
+                        </li>
+                        <li>
+                           <div><a href="https://www.notion.so/Data-Types-3c9e606de992449fb222ff542a0aa20b?pvs=4#03a630489df1466ebc15ed917fe8d327" target="_top">Boolean</a></div>
+                        </li>
+                        <li>
+                           <div><a href="https://www.notion.so/Data-Types-3c9e606de992449fb222ff542a0aa20b?pvs=4#1785d0567c6e4ad2b01ca23c9fbe98c3" target="_top"><span class="code">null</span></a></div>
+                        </li>
+                        <li>
+                           <div><a href="https://www.notion.so/Data-Types-3c9e606de992449fb222ff542a0aa20b?pvs=4#f2640118a1134165aa8970b0f5757d7d" target="_top"><span class="code">undefined</span></a></div>
+                        </li>
+                        <li>
+                           <div><a href="https://www.notion.so/Data-Types-3c9e606de992449fb222ff542a0aa20b?pvs=4#df698afde0fd4302b3a2eadd3052c73a" target="_top">Objects & symbols</a></div>
+                        </li>
+                        <li>
+                           <div><a href="https://www.notion.so/Data-Types-3c9e606de992449fb222ff542a0aa20b?pvs=4#e001ae7b7d9f4d01896b2e3a44f03377" target="_top">The <span class="code">typeof</span> operator</a></div>
+                        </li>
+                     </ul>
                   </li>
                   <li>
                      <div><a href="https://www.notion.so/Interaction-alert-prompt-confirm-c7f93d47d9cc4efab49db4ebee8494e1" target="_top">Interaction: <span class="code">alert</span>, <span class="code">prompt</span>, <span class="code">confirm</span></a></div>
@@ -326,6 +364,11 @@
       $('.math-btn').click(function () {
             $('.math-menu').toggleClass("show-math-menu");
             $('.math-arrow').toggleClass("fa-caret-down").toggleClass("fa-caret-up");
+      });
+
+      $('.datatypes-btn').click(function () {
+            $('.datatypes-menu').toggleClass("show-datatypes-menu");
+            $('.datatypes-arrow').toggleClass("fa-caret-down").toggleClass("fa-caret-up");
       });
 
       $('.loop-btn').click(function () {
