@@ -12,7 +12,7 @@
 /* Menu (size/position) */
 nav {
   position: fixed;
-  width: 275px;
+  width: 400px;
   left: 0px;
 }
 
@@ -42,7 +42,7 @@ nav {
   background: #e6e6e6;
 }
 
-.menu span {
+.menu span.fas {
   position: relative;
   padding-right: 5px;
   transition: transform 0.4s;
@@ -54,13 +54,18 @@ nav {
   color: #e6e6e6;
   background: #1e1e1e;
 }
-.menu div:hover span {
+.menu div:hover span.fas {
   color: #e6e6e6;
   background: #1e1e1e;
 }
 
 .rotate {
   transform: rotate(-180deg);
+}
+
+.code {
+  font-family: 'Fira Code';
+  font-weight: 500;
 }
 
 /*------------------------------------------------------*/
@@ -122,6 +127,10 @@ nav {
               padding-left: 105px;
             }
 
+            .l4 a span {
+              font-size: 13px;
+            }
+
 /*
   Section for each submenu:
     .[menu]-menu {
@@ -139,5 +148,23 @@ nav {
   display: none;
 }
 .fund-menu.show-fund-menu {
+  display: block;
+}
+
+/* Basic Operators & Math */
+.math-menu {
+  position: static;
+  display: none;
+}
+.math-menu.show-math-menu {
+  display: block;
+}
+
+/* Basic Loops */
+.loop-menu {
+  position: static;
+  display: none;
+}
+.loop-menu.show-loop-menu {
   display: block;
 }
