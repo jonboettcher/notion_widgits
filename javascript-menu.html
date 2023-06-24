@@ -5,10 +5,183 @@
 <head>
    <meta charset="utf-8">
    <title>Sidebar Menu with sub-menu | CodingNepal</title>
-   <link rel="stylesheet" href="javascript-menu.css">
+   <!-- <link rel="stylesheet" href="javascript-menu.css"> -->
    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
+
+<style>
+   @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+   @import url('https://fonts.googleapis.com/css?family=Fira Code');
+
+   * {
+   margin: 0;
+   padding: 0;
+   user-select: none;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+   }
+
+   /* Menu (size/position) */
+   nav {
+   position: fixed;
+   width: 400px;
+   left: 0px;
+   }
+
+   /* Menu title */
+   .title {
+   font-size: 20px;
+   font-weight: 600;
+   line-height: 40px;
+   text-align: center;
+   letter-spacing: 1px;
+   color: #1e1e1e;
+   background: #1e1e1e5c;
+   }
+
+   /*------------------------------------------------------*/
+
+   .menu div {
+   display: flex;
+   }
+
+   .menu a {
+   position: relative;
+   width: 100%;
+   border-left: 3px solid transparent;
+   text-decoration: none;
+   color: #1e1e1e;
+   background: #e6e6e6;
+   }
+
+   .menu span.fas {
+   position: relative;
+   padding-right: 5px;
+   transition: transform 0.4s;
+   color: #1e1e1e;
+   background: #e6e6e6;
+   }
+
+   .menu div:hover a {
+   color: #e6e6e6;
+   background: #1e1e1e;
+   }
+   .menu div:hover span.fas {
+   color: #e6e6e6;
+   background: #1e1e1e;
+   }
+
+   .rotate {
+   transform: rotate(-180deg);
+   }
+
+   .code {
+   font-family: 'Fira Code';
+   font-weight: 500;
+   }
+
+   /*------------------------------------------------------*/
+   /*------- L1 -------*/
+   .l1 li {
+   border-top: 1px solid #1e1e1e40;
+   line-height: 30px;
+   }
+
+   .l1 li:last-child {
+   border-bottom: 1px solid #1e1e1e40;
+   }
+
+   .l1 a {
+   font-size: 16px;
+   padding-left: 40px;
+   font-weight: 500;
+   }
+
+   .l1 span {
+   font-size: 16px;
+   }
+      /*------- L2 -------*/
+      .l2 li {
+         line-height: 25px;
+         border-top: none;
+      }
+
+      .l2 a {
+         font-size: 15px;
+         padding-left: 65px;
+      }
+
+      .l2 a span {
+         font-size: 15px;
+      }
+         /*------- L3 -------*/
+         .l3 li {
+            line-height: 20px;
+            border-top: none;
+         }
+
+         .l3 a {
+            font-size: 14px;
+            padding-left: 85px;
+         }
+
+         .l3 a span {
+            font-size: 14px;
+         }
+               /*------- L4 menu options -------*/
+               .l4 li {
+               line-height: 15px;
+               border-top: none;
+               }
+
+               .l4 a {
+               font-size: 13px;
+               padding-left: 105px;
+               }
+
+               .l4 a span {
+               font-size: 13px;
+               }
+
+   /*
+   Section for each submenu:
+      .[menu]-menu {
+         position: static;
+         display: none;
+      }
+      .[menu]-menu.show-[menu]-menu {
+         display: block;
+      }
+   */
+
+   /* JavaScript Fundamentals */
+   .fund-menu {
+   position: static;
+   display: none;
+   }
+   .fund-menu.show-fund-menu {
+   display: block;
+   }
+
+   /* Basic Operators & Math */
+   .math-menu {
+   position: static;
+   display: none;
+   }
+   .math-menu.show-math-menu {
+   display: block;
+   }
+
+   /* Basic Loops */
+   .loop-menu {
+   position: static;
+   display: none;
+   }
+   .loop-menu.show-loop-menu {
+   display: block;
+   }
+</style>
 
 <body>
    <nav>
