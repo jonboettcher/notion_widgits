@@ -2,11 +2,35 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Animated Phone</title>
+    <title>Animated insert()</title>
 </head>
+
+<style>
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .center-object {
+        /* Optional: Define width and height for the object */
+        width: 300px;
+        /* Adjust as needed */
+        height: 1000px;
+        /* Adjust as needed */
+    }
+</style>
 
 <body style="background-color: white;">
 
-    <object type="image/svg+xml" data="PythonInsert_animation.svg" height=350></object>
+    <object type="image/svg+xml" data="PythonInsert_animation.svg"></object>
+
+    <div class="center-object">
+        <object data="PythonInsert_animation.svg" type="image/svg+xml">
+        </object>
+    </div>
 
 </body>
