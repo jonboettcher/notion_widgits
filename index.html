@@ -15,11 +15,20 @@
         align-items: center;
     }
 
+    .frame {
+        border-radius: 15px;
+        /* Adjust the border-radius for the rounded corners */
+        overflow: hidden;
+        /* Hide content that overflows the frame */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        /* Optional: Add shadow for depth */
+    }
+
     .center-object {
         /* Optional: Define width and height for the object */
-        width: 600px;
+        width: 1000px;
         /* Adjust as needed */
-        height: 150px;
+        height: 350px;
         /* Adjust as needed */
     }
 </style>
@@ -28,9 +37,11 @@
 
     <object type="image/svg+xml" data="PythonInsert_animation.svg"></object>
 
-    <div class="center-object">
-        <object data="PythonInsert_animation.svg" type="image/svg+xml">
-        </object>
+    <div class="frame">
+        <div class="center-object">
+            <object data="PythonInsert_animation.svg" type="image/svg+xml">
+            </object>
+        </div>
     </div>
 
 </body>
