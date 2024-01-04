@@ -1,47 +1,45 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
 
 <head>
-    <meta charset="UTF-8" />
-    <title>Animated insert()</title>
+    <title>Rounded Frame for Object Element</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .frame {
+            border-radius: 15px;
+            /* Adjust the border-radius for the rounded corners */
+            overflow: hidden;
+            /* Hide content that overflows the frame */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            /* Optional: Add shadow for depth */
+        }
+
+        .object-container {
+            width: 500px;
+            /* Adjust as needed */
+            height: 200px;
+            /* Adjust as needed */
+        }
+    </style>
 </head>
 
-<style>
-    html,
-    body {
-        height: 100%;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .frame {
-        border-radius: 15px;
-        /* Adjust the border-radius for the rounded corners */
-        overflow: hidden;
-        /* Hide content that overflows the frame */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        /* Optional: Add shadow for depth */
-    }
-
-    .center-object {
-        /* Optional: Define width and height for the object */
-        width: 1000px;
-        /* Adjust as needed */
-        height: 350px;
-        /* Adjust as needed */
-    }
-</style>
-
-<body style="background-color: white;">
-
-    <object type="image/svg+xml" data="PythonInsert_animation.svg"></object>
-
+<body>
     <div class="frame">
-        <div class="center-object">
-            <object data="PythonInsert_animation.svg" type="image/svg+xml">
+        <div class="object-container">
+            <object ddata="PythonInsert_animation.svg" type="image/svg+xml">
+                <!-- Your fallback content if the object cannot be displayed -->
+                Fallback or alternative content here.
             </object>
         </div>
     </div>
-
 </body>
+
+</html>
